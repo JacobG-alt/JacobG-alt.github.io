@@ -9,14 +9,15 @@
     <!-- And this is how we link up the JS! -->
     <script defer src="js/main.js"></script>
     <!-- A fun title -->
-    <title>Empowering Tic Tac Toe for the Good of Humanity</title>
+    <title>Tic Tac Toe</title>
 </head>
 <body>
-    <h1>Tic-Tac-Toe</h1>
-    <h2>It's X's turn!</h2>
+
+    <h1 id="ttt">Tic-Tac-Toe</h1>
+    <h2>It's 🤬's turn!</h2>
     <!-- Many websites are just divs on divs on divs. -->
     <div class="flex-container flex-column">
-        <div class="flex-container flex-wrap" id="board">
+        <div class="flex-container flex-wrap" id="board" >
         <div class="square"></div>
         <div class="square"></div>
         <div class="square"></div>
@@ -28,7 +29,32 @@
         <div class="square"></div>
         </div>
         <!-- I added a little reset button because our users are going to want to play round after round of our glorious game without ever refreshing the browser! -->
-        <button id="reset-button">reset</button>
+        <button id="reset-button">recommencer</button>
+
+
+         <!-- affichage pointage -->
+         <div>
+            <p  id="alexisscorenom">Alexis</p>
+            <p id="alexispointage">0</p>
+            <p  id="demonscorenom">DEMON</p>
+            <p id="demonpointage">0</p>
+         </div>
+
+         <dialog >
+            <h2 class="dialog-title">Titre du Dialogue</h2>
+            <div id="container"> 
+               <img src="img\megaman.png" alt="" id="image" width="150" height="150">
+            </div>
+            <h3>Design web gr.2 - Automne 2024</h3>
+            <div id="grid-content">
+                <b>Realise par</b>
+                <i>Jacob Gravel</i>
+                <b>Inspiration</b>
+                <a href=" https://github.com/annaelizabeth2019/tictactoetwo"> https://github.com/annaelizabeth2019/tictactoetwo</a>
+            </div>
+            <button autofocus id="bouton-dialogue">Fermer</button>
+          </dialog>
+         
     </div>
 </body>
 </html>

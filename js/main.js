@@ -13,7 +13,7 @@ const winningCombos = [
 /*----- app's state (variables) -----*/
 
 let board;
-let turn = 'X';
+let turn = '🤬';
 let win;
 
 /*----- cached element references -----*/
@@ -34,6 +34,8 @@ function getWinner() {
         if (board[combo[0]] && board[combo[0]] === board[combo[1]] && board[combo[0]] === board[combo[2]]) winner = board[combo[0]];
         });
         return winner ? winner : board.includes('') ? null : 'T';
+        
+    
 };
 
 function handleTurn() {
@@ -41,7 +43,7 @@ function handleTurn() {
         return square === event.target;
     });
     board[idx] = turn;
-    turn = turn === 'X' ? 'O' : 'X';
+    turn = turn === '🤬' ? '👹' : '🤬';
     win = getWinner();
     render();
 };
@@ -60,7 +62,54 @@ function render() {
     //this moves the value of the board item into the squares[idx]
     squares[index].textContent = mark;
     });
-    messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
+    messages.textContent = win === 'T' ? `Egalite!` : win ? `${win} a gagne la partie!` : `Cest le tour a ${turn}!`;
+    pointage()
     };
 
 init();
+
+function mailto() 
+{
+    //fonction pour diriger vers mail
+  window.open("mailto:jacobgravel@outlook.fr");
+
+}
+
+//var pour pointage
+let alexis = 0;
+let demon = 0;
+
+
+ 
+function pointage()
+{
+    //fonction pour ajouter le pointage au gagnant de la round  
+    let alexispointage = document.getElementById('alexispointage');
+    let demonpointage = document.getElementById('demonpointage');
+
+
+    
+    if(win == "🤬")
+    {
+       alexis++;
+       alexispointage.innerHTML = alexis;
+    }
+    else if (win == "👹")
+    {  
+       demon++;
+       demonpointage.innerHTML = demon;
+    }
+}
+
+
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
+
+// Le bouton "Fermer" ferme le dialogue
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+
+dialog.showModal();     
+

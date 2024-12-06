@@ -1,16 +1,23 @@
 body {
+
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Times New Roman", Times, serif;
+    animation: bgcolor 2s linear infinite forwards;
     }
-    
+
+ 
     
 h2 {
     margin: 0 auto;
     font-size: 35px;
     margin: 10px;
 }
-    
-    
+
+#ttt 
+{
+ font-size: 110px;
+}
+
 .flex-container {
     /* In order to use flex-box we need to first set our display property */
     display: flex;
@@ -47,10 +54,140 @@ h2 {
     
     
 #reset-button {
+     /*Style du bouton "reset"*/
     text-align: center;
-    font-size: 20px;
-    border: 1px solid black;
     height: 55px;
-    width: 100px;
+    width: 140px;
     margin: 10px;
+    font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
+
+#reset-button:active {
+     /*style du bouton "reset" quand active*/
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  #reset-button {
+    padding: 0.25em 0.75em;
+  }
+}
+
+#mail {
+     /*icon dans footer*/
+    border-radius: 50%;
+    max-width: 180px;
+    max-height: 130px;
+}
+
+footer
+{
+     /*bande dans le bas de page*/
+
+background-color: rgb(255, 255, 255);
+  height: 150px;
+  width: 90%;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 5%;
+  font-size: larger;
+  animation: bgcolorfooter 2s linear infinite forwards;
+  
+}
+
+#alexisscorenom
+{
+    /*emplacement nom score alexis*/
+    font-size: 300%;
+    position: absolute;
+    top: 200px;
+    left: 430px;
+
+}
+#alexispointage
+{
+    /*emplacement score alexis*/
+    font-size: 300%;
+    position: absolute;
+    top: 250px;
+    left: 460px;
+}
+#demonscorenom
+{
+    /*emplacement nom score demon*/
+    font-size: 300%;
+    position: absolute;
+    top: 200px;
+    right: 430px;
+
+}
+#demonpointage
+{
+    /*emplacement score demon*/
+    font-size: 300%;
+    position: absolute;
+    top: 250px;
+    right: 460px;
+}
+
+
+
+#contenufooter
+{
+ /*Placer les elements dans le "footer"*/
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#nomprojet
+{
+    font-size: 35px;
+}
+
+#inspiration
+{
+    font-size: 35px;
+}
+
+::backdrop {
+
+    background-color: rgba(93, 188, 251, 0.5);
+  }
+  
+
+  .container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+  }
+  
+  .dialog-title {
+    text-decoration:underline;
+    text-underline-offset: 15px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(93, 188, 251, 0.5);
+  }
+
+  #bouton-dialogue {
+    background-color    : rgba(93, 188, 251, 0.5);
+  }
